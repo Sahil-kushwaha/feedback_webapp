@@ -28,7 +28,7 @@ interface User extends Document{
       verifyCode: string,
       verifyCodeExpiry: Date
       isAcceptingMesaage: boolean
-      message :Message[]
+      message :Message[] 
 }
 
 const userSchema = new Schema<User>({
