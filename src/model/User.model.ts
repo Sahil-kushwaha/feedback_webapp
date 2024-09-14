@@ -1,6 +1,6 @@
 import mongoose ,{Schema,Document} from "mongoose";
 
-interface Message extends Document{
+export interface Message extends Document{
      content:string,
      createdAt : Date
 }
@@ -24,7 +24,7 @@ interface User extends Document{
       username:string,
       email:string,
       password:string,
-      isVerify: boolean
+      isVerified: boolean
       verifyCode: string,
       verifyCodeExpiry: Date
       isAcceptingMesaage: boolean
@@ -50,7 +50,7 @@ const userSchema = new Schema<User>({
          required:[true , 'password required']
     },
 
-    isVerify:{
+    isVerified:{
          type: Boolean,
          defualt:false
     },
